@@ -1,6 +1,6 @@
 .home_component {
   border: 1px solid black;
   padding: 10px;
-  box-shadow: 5px 10px rgb(32, 31, 31);
+  box-shadow: 5px 10px red;
   width: 400px;
 }
