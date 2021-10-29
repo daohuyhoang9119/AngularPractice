@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   constructor() {}
+  public hisName = 'Ryan';
+  public myName = 'King';
+  public hisAge = 19;
+  public myAge = 20;
 
   ngOnInit(): void {}
 }
