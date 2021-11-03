@@ -13,4 +13,12 @@ export class HomeComponent implements OnInit {
   public myAge = -1;
 
   ngOnInit(): void {}
+  public resetName(): void {
+    this.hisName = '';
+    console.log('This is a resetName function ');
+  }
+
+  public addName(): void {
+    console.log('add your name');
+  }
 }

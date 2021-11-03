@@ -1,14 +1,15 @@
 <div class="home_component">
   <h1>this is a home component</h1>
-  <h2>Hello {{ hisName }}</h2>
-  <h2>Hi {{ hisName }},My name is {{ myName }}</h2>
-  <h2>Our total age is {{ hisAge + myAge }}</h2>
-  <input type="text" value="{{ hisName }}" title="this is {{ hisName }}" />
-  <p>--------------</p>
-  <input type="text" [value]="myName" [title]="'this is ' + myName" />
-  <!-- <h4>This is my money: {{ myMoney }}</h4> -->
-  <p>-----------</p>
-  <h4 *ngIf="myAge > 18 && myAge > 0">You are too old</h4>
-  <h4 *ngIf="myAge <= 18 && myAge > 0">You are too young</h4>
-  <h4 *ngIf="myAge < 0">Your age is not correct</h4>
+  <input
+    type="text"
+    [value]="hisName"
+    [(ngModel)]="hisName"
+    placeholder="Write your name"
+  />
+
+  <button (click)="addName()">Add Name</button>
+
+  <h3>Hello {{ hisName }}</h3>
+
+  <button (click)="resetName()">Reset Name</button>
 </div>
