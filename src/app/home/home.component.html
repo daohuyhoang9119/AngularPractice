@@ -3,5 +3,8 @@
   <h2>Hello {{ hisName }}</h2>
   <h2>Hi {{ hisName }},My name is {{ myName }}</h2>
   <h2>Our total age is {{ hisAge + myAge }}</h2>
-  <p>bla</p>
+  <input type="text" value="{{ hisName }}" title="this is {{ hisName }}" />
+  <p>--------------</p>
+  <input type="text" [value]="myName" [title]="'this is ' + myName" />
+  <!-- <h4>This is my money: {{ myMoney }}</h4> -->
 </div>
