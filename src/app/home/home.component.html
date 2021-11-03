@@ -1,13 +1,13 @@
 <div class="home_component">
   <h1>this is a home component</h1>
-  <h2>List of Fruits</h2>
+  <!-- <h2>List of Fruits</h2>
   <ul *ngFor="let fruit of listOfFruits; let i = index">
     <li>
       <h3>{{ i }}. {{ fruit.toLowerCase() }}</h3>
     </li>
-  </ul>
+  </ul> -->
   <p>-----------------------------------------------</p>
-  <table style="width: 100%" class="fruit__list">
+  <!-- <table style="width: 100%" class="fruit__list">
     <tr>
       <th>STT</th>
       <th>Fruit</th>
@@ -21,9 +21,22 @@
       <td [ngClass]="{ sale: item.price < 11 }">
         {{ item.price | currency: "EUR":"symbol":"1.2" }}
       </td>
-      <!-- neu item.price < 11 true thi class sale se chay trong css -->
-      <td>{{ item.from }}</td>
+      neu item.price < 11 true thi class sale se chay trong css
+       <td>{{ item.from }}</td>
       <td class="sale">{{ item.sale | onSale | uppercase }}</td>
-    </tr>
-  </table>
+    </tr> -->
+  <!-- </table> -->
+  <label for="city">Tỉnh / Thành Phố:</label>
+  <select name="city" id="city" (change)="changeCity($event)">
+    <option value="{{ data.city }}" *ngFor="let data of VietNam">
+      {{ data.city }}
+    </option>
+  </select>
+  <p>------</p>
+  <label for="district">Quận / Huyện:</label>
+  <select name="district" id="district">
+    <option value="{{ district }}" *ngFor="let district of districts">
+      {{ district }}
+    </option>
+  </select>
 </div>
