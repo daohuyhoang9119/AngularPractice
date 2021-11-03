@@ -17,8 +17,4 @@ export class HomeComponent implements OnInit {
     this.hisName = '';
     console.log('This is a resetName function ');
   }
-
-  public addName(): void {
-    console.log('add your name');
-  }
 }

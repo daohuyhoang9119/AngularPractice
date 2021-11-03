@@ -3,13 +3,18 @@
   <input
     type="text"
     [value]="hisName"
-    [(ngModel)]="hisName"
-    placeholder="Write your name"
+    [(ngModel)]="hisAge"
+    placeholder="Write your age"
   />
 
-  <button (click)="addName()">Add Name</button>
-
-  <h3>Hello {{ hisName }}</h3>
+  <h3>Your age is {{ hisAge }}</h3>
+  <!-- <h4 *ngIf="hisAge <= 18 && hisAge > 0">You are too young</h4>
+  <h4 *ngIf="hisAge > 18 && hisAge > 0">You are too old</h4> -->
+  <div *ngIf="hisAge <= 18; then young; else old"></div>
+  <ng-template #young><h4>You are too young!</h4></ng-template>
+  <ng-template #old><h4>You are too old!</h4></ng-template>
+  <div *ngIf="hisAge < 0; then incorrect"></div>
+  <ng-template #incorrect><h4>Your age is not correct</h4></ng-template>
 
   <button (click)="resetName()">Reset Name</button>
 </div>
