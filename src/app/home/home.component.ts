@@ -7,14 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   constructor() {}
-  public hisName = 'Ryan';
-  public myName = 'King';
-  public hisAge = 19;
-  public myAge = -1;
 
-  ngOnInit(): void {}
-  public resetName(): void {
-    this.hisName = '';
-    console.log('This is a resetName function ');
+  public listOfFruits = [
+    'orange',
+    'watermelon',
+    'strawbery',
+    'pineapple',
+    'apple',
+  ];
+  ngOnInit(): void {
+    console.log(`fruit: ${this.listOfFruits}`);
   }
 }

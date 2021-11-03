@@ -1,20 +1,12 @@
 <div class="home_component">
   <h1>this is a home component</h1>
-  <input
-    type="text"
-    [value]="hisName"
-    [(ngModel)]="hisAge"
-    placeholder="Write your age"
-  />
-
-  <h3>Your age is {{ hisAge }}</h3>
-  <!-- <h4 *ngIf="hisAge <= 18 && hisAge > 0">You are too young</h4>
-  <h4 *ngIf="hisAge > 18 && hisAge > 0">You are too old</h4> -->
-  <div *ngIf="hisAge <= 18; then young; else old"></div>
-  <ng-template #young><h4>You are too young!</h4></ng-template>
-  <ng-template #old><h4>You are too old!</h4></ng-template>
-  <div *ngIf="hisAge < 0; then incorrect"></div>
-  <ng-template #incorrect><h4>Your age is not correct</h4></ng-template>
-
-  <button (click)="resetName()">Reset Name</button>
+  <h2>List of Fruits</h2>
+  <ul *ngFor="let fruit of listOfFruits; let i = index">
+    <!-- <li>Orange</li>
+    <li>Melon</li> -->
+    <li>
+      <h3>{{ i }}. {{ fruit.toLowerCase() }}</h3>
+    </li>
+  </ul>
+  <p>-----------------------------------------------</p>
 </div>
