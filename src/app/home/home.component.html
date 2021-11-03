@@ -2,11 +2,26 @@
   <h1>this is a home component</h1>
   <h2>List of Fruits</h2>
   <ul *ngFor="let fruit of listOfFruits; let i = index">
-    <!-- <li>Orange</li>
-    <li>Melon</li> -->
     <li>
       <h3>{{ i }}. {{ fruit.toLowerCase() }}</h3>
     </li>
   </ul>
   <p>-----------------------------------------------</p>
+  <table style="width: 100%" class="fruit__list">
+    <tr>
+      <th>STT</th>
+      <th>Fruit</th>
+      <th>Price</th>
+      <th>From</th>
+      <th>Sale</th>
+    </tr>
+    <tr *ngFor="let item of fruitStore; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ item.name }}</td>
+      <td [ngClass]="{ sale: item.price < 11 }">{{ item.price }}</td>
+      <!-- neu item.price < 11 true thi class sale se chay trong css -->
+      <td>{{ item.from }}</td>
+      <td class="sale" *ngIf="item.sale">On Sale</td>
+    </tr>
+  </table>
 </div>

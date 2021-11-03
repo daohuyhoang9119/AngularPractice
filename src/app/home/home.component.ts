@@ -15,6 +15,38 @@ export class HomeComponent implements OnInit {
     'pineapple',
     'apple',
   ];
+  public fruitStore = [
+    {
+      name: 'Orange',
+      price: 10,
+      from: 'VN',
+      sale: true,
+    },
+    {
+      name: 'Watermelon',
+      price: 12,
+      from: 'US',
+      sale: false,
+    },
+    {
+      name: 'Apple',
+      price: 7.5,
+      from: 'China',
+      sale: true,
+    },
+    {
+      name: 'Strawberry',
+      price: 18,
+      from: 'USA',
+      sale: false,
+    },
+    {
+      name: 'Melon',
+      price: 9,
+      from: 'Korea',
+      sale: true,
+    },
+  ];
   ngOnInit(): void {
     console.log(`fruit: ${this.listOfFruits}`);
   }
