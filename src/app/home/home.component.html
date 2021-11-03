@@ -7,4 +7,8 @@
   <p>--------------</p>
   <input type="text" [value]="myName" [title]="'this is ' + myName" />
   <!-- <h4>This is my money: {{ myMoney }}</h4> -->
+  <p>-----------</p>
+  <h4 *ngIf="myAge > 18 && myAge > 0">You are too old</h4>
+  <h4 *ngIf="myAge <= 18 && myAge > 0">You are too young</h4>
+  <h4 *ngIf="myAge < 0">Your age is not correct</h4>
 </div>

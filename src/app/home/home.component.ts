@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
   public hisName = 'Ryan';
   public myName = 'King';
   public hisAge = 19;
-  public myAge = 20;
+  public myAge = -1;
 
   ngOnInit(): void {}
 }
