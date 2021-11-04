@@ -1,1 +1,14 @@
 <p>about works!</p>
+<div [ngSwitch]="loginName">
+  <h1 *ngSwitchCase="'user'">
+    <p>User is logged in....</p>
+    <app-page-not-found></app-page-not-found>
+  </h1>
+  <h1 *ngSwitchCase="'admin'">
+    <p>admin is logged in</p>
+    <app-home></app-home>
+  </h1>
+  <h1 *ngSwitchDefault>
+    <p>Please choose login name</p>
+  </h1>
+</div>

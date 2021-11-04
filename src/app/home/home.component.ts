@@ -99,15 +99,15 @@ export class HomeComponent implements OnInit {
   }
 
   public changeCity(event: any): void {
-    console.log('event', event);
+    // console.log('event', event);
     const city = event.target.value;
-    console.log(city);
+    // console.log(city);
     if (!city) {
       return;
     }
     //c1
     const search = this.VietNam.filter((data) => data.city === city);
-    console.log('search', search);
+    // console.log('search', search);
     if (search && search.length > 0) {
       this.districts = search[0].district;
     }
