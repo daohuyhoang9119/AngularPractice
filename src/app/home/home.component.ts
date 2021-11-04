@@ -111,5 +111,9 @@ export class HomeComponent implements OnInit {
     if (search && search.length > 0) {
       this.districts = search[0].district;
     }
+
+    //c2
+    this.districts =
+      this.VietNam.find((data) => data.city === city)?.district || [];
   }
 }

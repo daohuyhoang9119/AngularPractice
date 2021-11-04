@@ -1,4 +1,14 @@
-<h1>Hi Angular 12</h1>
-<h2>My name is Hoang, I'm learning Angular 12</h2>
-<h2>Good luck on your road</h2>
-<app-home></app-home>
+<h1>Welcome to Angular 12: Routing</h1>
+
+<nav>
+  <ul>
+    <li>
+      <a routerLink="/about" routerLinkActive="active">About Component</a>
+    </li>
+    <li>
+      <a routerLink="/home" routerLinkActive="active">Home Component</a>
+    </li>
+  </ul>
+</nav>
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>
