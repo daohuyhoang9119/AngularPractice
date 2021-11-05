@@ -1,0 +1,22 @@
+<h2>HTML Forms</h2>
+<p>template-driven-form works!</p>
+
+<form>
+  <label for="fname">First name:</label><br />
+  <input
+    type="text"
+    id="fname"
+    [(ngModel)]="user[0].name"
+    [ngModelOptions]="{ standalone: true }"
+    placeholder="Write your first name"
+  /><br />
+  <label for="lname">Last name:</label><br />
+  <input
+    type="text"
+    id="lname"
+    [(ngModel)]="user[0].age"
+    [ngModelOptions]="{ standalone: true }"
+    placeholder="Write your age"
+  /><br /><br />
+  <input type="submit" value="Submit" (click)="submitForm()" />
+</form>
