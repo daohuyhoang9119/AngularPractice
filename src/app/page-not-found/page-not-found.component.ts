@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../Services/common.service';
 
 @Component({
   selector: 'app-page-not-found',
@@ -6,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-not-found.component.css'],
 })
 export class PageNotFoundComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
+  constructor(private common: CommonService) {}
+  public counter = 0;
+  public counterBinhPhuong = 0;
+  ngOnInit(): void {
+    // this.counter = this.common.counter;
+    // this.counterBinhPhuong = this.common.multipleTwo(this.counterBinhPhuong);
+    // this.common.counter++;
+  }
 }

@@ -11,14 +11,14 @@ export class HighLightDirective {
     // el.nativeElement.style.fontSize = '30px';
   }
   ngOnInit(): void {
-    console.log(
-      'ngOnInit constructor: highlight directives:',
-      this.appHighLight
-    );
+    // console.log(
+    //   'ngOnInit constructor: highlight directives:',
+    //   this.appHighLight
+    // );
     if (!this.appHighLight) {
       this.appHighLight = 'green';
     } //neu chung ta ko dua tham so dau vao thi gia tri ban dau cua appHighLight no se la null
-    console.log(this.el.nativeElement);
+    // console.log(this.el.nativeElement);
     this.el.nativeElement.style.color = this.appHighLight;
   }
 }

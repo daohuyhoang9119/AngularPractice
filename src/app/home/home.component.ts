@@ -1,5 +1,6 @@
 import { i18nMetaToJSDoc } from '@angular/compiler/src/render3/view/i18n/meta';
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../Services/common.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  constructor(private common: CommonService) {}
   public districts: string[] = [];
 
   public listOfFruits = [
@@ -94,8 +95,13 @@ export class HomeComponent implements OnInit {
       ],
     },
   ];
+  public counter = 0;
+  public counterBinhPhuong = 0;
   ngOnInit(): void {
     // console.log('cities', this.VietNam);
+    this.counter = this.common.counter;
+    this.counterBinhPhuong = this.common.binhPhuong(this.counter);
+    this.common.counter++;
   }
 
   public changeCity(event: any): void {
