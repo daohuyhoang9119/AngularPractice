@@ -1,4 +1,6 @@
-<p>about works!</p>
+<p appHighLight>about works!</p>
+<p [appHighLight]="myColor">about works 1!</p>
+<p [appHighLight]="'orange'">about works 2!</p>
 <div [ngSwitch]="loginName">
   <h1 *ngSwitchCase="'user'">
     <p>User is logged in....</p>

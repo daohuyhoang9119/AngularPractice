@@ -95,7 +95,7 @@ export class HomeComponent implements OnInit {
     },
   ];
   ngOnInit(): void {
-    console.log('cities', this.VietNam);
+    // console.log('cities', this.VietNam);
   }
 
   public changeCity(event: any): void {

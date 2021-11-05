@@ -9,6 +9,7 @@ export class AboutComponent implements OnInit {
   constructor() {}
   public loginName = 'admin';
   public num = '1';
-
+  public myColor = 'red';
+  public myColor2 = 'yellow';
   ngOnInit(): void {}
 }
