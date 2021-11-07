@@ -18,7 +18,7 @@ export class CommonService {
     this.counter = n;
   }
 
-  public submitData(user: object): void {
+  public submitData(user: any): void {
     console.log('Gui data len server: ', user);
   }
 }
