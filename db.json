@@ -1,0 +1,74 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": "this is a id",
+      "title": "book 1",
+      "author": "CR7"
+    },
+    {
+      "title": "book 1",
+      "author": "CR7",
+      "id": 2
+    },
+    {
+      "title": "book 1",
+      "author": "CR7",
+      "id": 3
+    },
+    {
+      "title": "book 1",
+      "author": "CR7",
+      "id": 4
+    },
+    {
+      "id": 33,
+      "title": "book 1",
+      "author": "CR7"
+    },
+    {
+      "id": 78,
+      "title": "book 1",
+      "author": "CR7"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "body": "this is a message from user",
+      "postId": 4,
+      "id": 2
+    },
+    {
+      "body": "this is a message from user",
+      "postId": 4,
+      "id": 3
+    },
+    {
+      "body": "this is a message from user",
+      "postId": 4,
+      "id": 4
+    },
+    {
+      "body": "this is a message from user",
+      "postId": 4,
+      "id": 5
+    },
+    {
+      "body": "this is a message from user",
+      "postId": 4,
+      "id": 6
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

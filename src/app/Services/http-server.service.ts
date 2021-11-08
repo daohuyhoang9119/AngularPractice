@@ -16,19 +16,29 @@ export class HttpServerService {
   };
 
   constructor(private httpClient: HttpClient) {}
-
-  public getComments(): Observable<any> {
-    const url = `${this.REST_API_SERVER}/comments`;
-    return this.httpClient.get<any>(url, this.httpOptions);
-  }
+  //randomuser
   public getRandomUser(users: number = 1): Observable<any> {
     const url = `${this.REST_API_SERVER_RANDOM_USERS}${users}`;
     return this.httpClient.get<any>(url, this.httpOptions);
   }
-
+  //comments
+  public getComments(): Observable<any> {
+    const url = `${this.REST_API_SERVER}/comments`;
+    return this.httpClient.get<any>(url, this.httpOptions);
+  }
   public postComment(payload: any): Observable<any> {
     const url = `${this.REST_API_SERVER}/comments`;
     console.log('payload:', payload);
     return this.httpClient.post<any>(url, payload, this.httpOptions);
+  }
+  //post
+  public getPosts(): Observable<any> {
+    const url = `${this.REST_API_SERVER}/posts`;
+    return this.httpClient.get<any>(url, this.httpOptions);
+  }
+  public addPost(data: any): Observable<any> {
+    const url = `${this.REST_API_SERVER}/posts`;
+    console.log(url);
+    return this.httpClient.post<any>(url, data, this.httpOptions);
   }
 }

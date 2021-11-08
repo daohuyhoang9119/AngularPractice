@@ -1,0 +1,16 @@
+<h1>display-data works!</h1>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Author</th>
+  </tr>
+  <tr *ngFor="let post of posts">
+    <td>{{ post?.id }}</td>
+    <td>{{ post?.title }}</td>
+    <td>{{ post?.author }}</td>
+  </tr>
+</table>
+
+<br />
+<button (click)="addPost()">Add post</button>
