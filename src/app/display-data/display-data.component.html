@@ -1,14 +1,21 @@
-<h1>display-data works!</h1>
+<h2>
+  Hello my friends, you have
+  <span class="badge">{{ posts.length }} message</span>
+</h2>
 <table>
   <tr>
     <th>ID</th>
     <th>Title</th>
     <th>Author</th>
+    <th>Delete</th>
   </tr>
   <tr *ngFor="let post of posts">
     <td>{{ post?.id }}</td>
     <td>{{ post?.title }}</td>
     <td>{{ post?.author }}</td>
+    <td>
+      <button (click)="deletePost(post?.id)">Delete post</button>
+    </td>
   </tr>
 </table>
 

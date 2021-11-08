@@ -29,4 +29,12 @@ export class DisplayDataComponent implements OnInit {
       this.posts.push(postExample);
     });
   }
+  public deletePost(id: any) {
+    console.log('id:', id);
+    const removeIndex = this.posts.map((post: any) => post.id).indexOf(id);
+    // console.log('removeIndex:', removeIndex);
+    if (removeIndex > -1) {
+      this.posts.splice(removeIndex, 1);
+    }
+  }
 }
